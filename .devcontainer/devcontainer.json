@@ -12,19 +12,36 @@
     },
     "ghcr.io/devcontainers-contrib/features/prisma:2": {
       "version": "latest"
-    }
+    },
+    "ghcr.io/devcontainers-contrib/features/vscode-server": {}
   },
-  "mounts": [
-    "source=/home/tiagoluizpoli/01-dev-env,target=/dev-env,type=bind"
-  ]
   // Features to add to the dev container. More info: https://containers.dev/features.
-  // "features": {},
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  // "forwardPorts": [],
+  "forwardPorts": [
+    8000
+  ],
   // Use 'postCreateCommand' to run commands after the container is created.
   // "postCreateCommand": "yarn install",
   // Configure tool-specific properties.
-  // "customizations": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "EditorConfig.EditorConfig",
+        "heaths.vscode-guid",
+        "JannisX11.batch-rename-extension",
+        "dzhavat.bracket-pair-toggler",
+        "maximus136.change-string-case",
+        "ms-azuretools.vscode-docker",
+        "mhutchie.git-graph",
+        "eamodio.gitlens",
+        "VisualStudioExptTeam.vscodeintellicode",
+        "VisualStudioExptTeam.intellicode-api-usage-examples",
+        "christian-kohler.path-intellisense",
+        "YoavBls.pretty-ts-errors",
+        "Prisma.prisma"
+      ]
+    }
+  }
   // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
   // "remoteUser": "root"
 }
